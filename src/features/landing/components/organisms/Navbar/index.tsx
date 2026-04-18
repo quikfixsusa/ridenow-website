@@ -2,11 +2,9 @@
 
 import React from "react";
 import { Button, Link, Toolbar } from "@heroui/react";
-import { useTranslation } from "react-i18next";
 import { Logo } from "../../atoms";
 
 export const Navbar: React.FC = () => {
-  const { t } = useTranslation();
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-separator bg-background/80 backdrop-blur-md">
