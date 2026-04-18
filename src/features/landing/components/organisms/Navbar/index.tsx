@@ -12,15 +12,24 @@ export const Navbar: React.FC = () => {
     <nav className="sticky top-0 z-50 w-full border-b border-separator bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Logo />
-        
+
         <Toolbar aria-label="Main navigation" className="hidden gap-8 md:flex">
-          <Link className="text-sm font-medium hover:text-accent transition-colors" href="#features">
+          <Link
+            className="text-sm font-medium hover:text-accent transition-colors"
+            href="#features"
+          >
             Features
           </Link>
-          <Link className="text-sm font-medium hover:text-accent transition-colors" href="#services">
+          <Link
+            className="text-sm font-medium hover:text-accent transition-colors"
+            href="#services"
+          >
             Services
           </Link>
-          <Link className="text-sm font-medium hover:text-accent transition-colors" href="#about">
+          <Link
+            className="text-sm font-medium hover:text-accent transition-colors"
+            href="#about"
+          >
             About
           </Link>
         </Toolbar>
@@ -29,9 +38,7 @@ export const Navbar: React.FC = () => {
           <Button variant="ghost" className="hidden sm:flex">
             Login
           </Button>
-          <Button variant="primary">
-            Sign Up
-          </Button>
+          <Button variant="primary">Sign Up</Button>
         </div>
       </div>
     </nav>
