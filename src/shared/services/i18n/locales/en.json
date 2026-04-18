@@ -2,5 +2,23 @@
   "common": {
     "welcome": "Welcome",
     "changeLanguage": "Change Language"
+  },
+  "landing": {
+    "hero": {
+      "title": "RideNow: Your Journey, Simplified",
+      "subtitle": "Get a reliable ride in minutes. Fast, safe, and always available when you need it.",
+      "cta": "Start Riding"
+    },
+    "features": {
+      "fastTitle": "Lightning Fast",
+      "fastDesc": "Never wait long for a ride with our optimized matching algorithm.",
+      "safeTitle": "Safety First",
+      "safeDesc": "Verified drivers and real-time trip tracking for your peace of mind.",
+      "availableTitle": "Always Ready",
+      "availableDesc": "24/7 service across the city, wherever you are."
+    },
+    "footer": {
+      "rights": "All rights reserved. RideNow 2026."
+    }
   }
 }

@@ -1,6 +1,24 @@
 {
   "common": {
     "welcome": "Bienvenido",
-    "changeLanguage": "Cambiar idioma"
+    "changeLanguage": "Cambiar Idioma"
+  },
+  "landing": {
+    "hero": {
+      "title": "RideNow: Tu Viaje, Simplificado",
+      "subtitle": "Consigue un transporte confiable en minutos. Rápido, seguro y siempre disponible cuando lo necesites.",
+      "cta": "Empezar a Viajar"
+    },
+    "features": {
+      "fastTitle": "Velocidad Relámpago",
+      "fastDesc": "No esperes mucho por un viaje gracias a nuestro algoritmo optimizado.",
+      "safeTitle": "Seguridad Primero",
+      "safeDesc": "Conductores verificados y seguimiento del viaje en tiempo real para tu tranquilidad.",
+      "availableTitle": "Siempre Listo",
+      "availableDesc": "Servicio 24/7 en toda la ciudad, estés donde estés."
+    },
+    "footer": {
+      "rights": "Todos los derechos reservados. RideNow 2026."
+    }
   }
 }
