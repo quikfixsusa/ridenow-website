@@ -72,7 +72,7 @@ export const Header = ({ className }: HeaderProps) => {
           <Button
             size="md"
             variant="primary"
-            className="font-semibold shadow-lg shadow-primary/20"
+            className="font-semibold shadow-lg shadow-accent/20"
           >
             Get Started
           </Button>
