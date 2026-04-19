@@ -33,6 +33,7 @@ export const Header = ({ className }: HeaderProps) => {
       } ${className}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+
         {/* Brand */}
         <div className="flex items-center gap-2">
           <Link
