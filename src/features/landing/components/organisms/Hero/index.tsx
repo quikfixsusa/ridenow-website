@@ -4,6 +4,7 @@ import React from 'react';
 import { Button } from '@heroui/react';
 import Link from 'next/link';
 import { useLanguage, useIntersectionObserver } from '@/shared/hooks';
+import Image from 'next/image';
 
 const AppleIcon = () => (
   <svg viewBox="0 0 512 512" className="h-7 w-7" fill="currentColor">
@@ -66,13 +67,13 @@ export const Hero = () => {
               href="https://apps.apple.com/us/app/id6742415073"
               target="_blank"
             >
-              <Button className="group bg-foreground text-background inline-flex h-auto items-center justify-center gap-4 rounded-3xl px-8 py-2 text-lg font-medium transition-transform active:scale-[0.98]">
+              <Button className="group bg-foreground text-background inline-flex h-auto items-center justify-center gap-4 rounded-3xl px-8 pt-2.5 pb-2 text-lg font-medium transition-transform active:scale-[0.98]">
                 <AppleIcon />
                 <div className="flex flex-col items-start leading-none">
                   <span className="text-[10px] font-normal tracking-wider uppercase opacity-80">
                     {t('hero.downloadOn')}
                   </span>
-                  <span className="text-lg font-bold">
+                  <span className="mt-[-4px] text-lg font-bold">
                     {t('hero.appStore')}
                   </span>
                 </div>
@@ -84,14 +85,14 @@ export const Hero = () => {
             >
               <Button
                 variant="outline"
-                className="border-foreground/10 hover:bg-foreground/5 text-foreground inline-flex h-auto items-center justify-center gap-4 rounded-3xl px-8 py-2 text-lg font-medium transition-colors active:scale-[0.98]"
+                className="border-foreground/10 hover:bg-foreground/5 text-foreground inline-flex h-auto items-center justify-center gap-4 rounded-3xl px-8 pt-2.5 pb-2 text-lg font-medium transition-colors active:scale-[0.98]"
               >
                 <PlayStoreIcon />
                 <div className="flex flex-col items-start leading-none">
                   <span className="text-[10px] font-normal tracking-wider uppercase opacity-80">
                     {t('hero.getItOn')}
                   </span>
-                  <span className="text-lg font-bold">
+                  <span className="mt-[-4px] text-lg font-bold">
                     {t('hero.googlePlay')}
                   </span>
                 </div>
@@ -101,35 +102,16 @@ export const Hero = () => {
         </div>
 
         {/* Right: Mockup Image/Graphic (Double-Bezel) */}
-        <div
-          className={`ease-out-fluid relative flex h-[600px] w-full items-center justify-center transition-all delay-300 duration-1000 lg:justify-end ${
-            isIntersecting
-              ? 'translate-x-0 opacity-100'
-              : 'translate-x-12 opacity-0'
-          }`}
-        >
-          {/* Outer Shell */}
-          <div className="bg-foreground/5 ring-foreground/10 relative flex h-full max-h-[640px] w-full max-w-[320px] flex-col items-center justify-center rounded-[3rem] p-2 shadow-2xl ring-1 backdrop-blur-3xl">
-            {/* Inner Core */}
-            <div className="bg-surface border-divider relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-[calc(3rem-0.5rem)] border shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
-              <div className="bg-accent text-accent-foreground flex h-24 w-24 animate-pulse items-center justify-center rounded-full shadow-[0_0_40px_rgba(255,200,0,0.5)]">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40"
-                  height="40"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-            </div>
-          </div>
+        <div className="flex items-end justify-end">
+          <Image
+            src={require('../../../../../../public/images/mockup-home.png')}
+            alt="Hero Mockup"
+            className={`ease-out-fluid relative flex h-[650px] w-auto items-center justify-center transition-all delay-300 duration-1000 lg:justify-end ${
+              isIntersecting
+                ? 'translate-x-0 opacity-100'
+                : 'translate-x-12 opacity-0'
+            }`}
+          />
         </div>
       </div>
     </section>

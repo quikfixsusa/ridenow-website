@@ -1,12 +1,34 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense } from "react";
 import "@/shared/services/i18n"; // Initialize i18n
 import { useConfigStore } from "@/shared/hooks";
+import { useSearchParams } from "next/navigation";
 
 interface ProvidersProps {
   children: React.ReactNode;
 }
+
+/**
+ * Listener component for language search parameters.
+ * Updates the global config store when 'lang' or 'language' is present in the URL.
+ */
+const LanguageSearchParamsHandler = () => {
+  const searchParams = useSearchParams();
+  const setLanguage = useConfigStore((state) => state.setLanguage);
+  const currentLanguage = useConfigStore((state) => state.language);
+
+  useEffect(() => {
+    const lang = searchParams.get("lang") || searchParams.get("language");
+    
+    // Only update if the language is different and supported
+    if (lang && lang !== currentLanguage && ["en", "es"].includes(lang)) {
+      setLanguage(lang);
+    }
+  }, [searchParams, setLanguage, currentLanguage]);
+
+  return null;
+};
 
 export const Providers: React.FC<ProvidersProps> = ({ children }) => {
   const theme = useConfigStore((state) => state.theme);
@@ -24,5 +46,12 @@ export const Providers: React.FC<ProvidersProps> = ({ children }) => {
 
   // Ensure initial suppression of hydration mismatch by only rendering after mount if needed,
   // but for pure providers, just returning children is fine since CSS takes care of initial mismatch mostly.
-  return <>{children}</>;
+  return (
+    <>
+      <Suspense fallback={null}>
+        <LanguageSearchParamsHandler />
+      </Suspense>
+      {children}
+    </>
+  );
 };
