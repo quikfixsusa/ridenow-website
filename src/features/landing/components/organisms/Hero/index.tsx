@@ -9,13 +9,13 @@ export const Hero = () => {
   const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.1 });
 
   return (
-    <section className="bg-background relative flex min-h-[100dvh] w-full items-center overflow-hidden px-4 pt-32 pb-16">
+    <section className="bg-background relative flex min-h-dvh w-full items-center overflow-hidden px-4 pt-32 pb-16">
       {/* Subtle background ambient mesh */}
-      <div className="bg-accent/20 pointer-events-none absolute top-0 right-0 h-[50vw] w-[50vw] translate-x-1/4 -translate-y-1/2 rounded-full blur-[150px]"></div>
+      <div className="bg-accent-soft-hover pointer-events-none absolute top-0 right-0 h-[50vw] w-[50vw] translate-x-1/4 -translate-y-1/2 rounded-full blur-[150px]"></div>
 
       <div
         ref={ref}
-        className={`z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 transition-all duration-1000 ease-[cubic-bezier(0.32,0.72,0,1)] lg:grid-cols-2 ${
+        className={`ease-out-fluid z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 transition-all duration-1000 lg:grid-cols-2 ${
           isIntersecting
             ? 'translate-y-0 opacity-100'
             : 'translate-y-12 opacity-0'
@@ -23,7 +23,7 @@ export const Hero = () => {
       >
         {/* Left: Typography Block */}
         <div className="flex max-w-2xl flex-col items-start text-left">
-          <h1 className="text-foreground mb-8 text-6xl leading-[0.95] font-black tracking-tighter md:text-8xl">
+          <h1 className="text-foreground font-display mb-8 text-6xl leading-[0.95] font-black md:text-8xl">
             <span className="block">{t('hero.title1')}</span>
             <span className="text-accent mt-2 block drop-shadow-sm">
               {t('hero.title2')}
@@ -65,7 +65,7 @@ export const Hero = () => {
 
         {/* Right: Mockup Image/Graphic (Double-Bezel) */}
         <div
-          className={`relative flex h-[600px] w-full items-center justify-center transition-all delay-300 duration-1000 ease-[cubic-bezier(0.32,0.72,0,1)] lg:justify-end ${
+          className={`ease-out-fluid relative flex h-[600px] w-full items-center justify-center transition-all delay-300 duration-1000 lg:justify-end ${
             isIntersecting
               ? 'translate-x-0 opacity-100'
               : 'translate-x-12 opacity-0'
