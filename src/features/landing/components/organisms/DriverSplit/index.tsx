@@ -59,7 +59,7 @@ export const DriverSplit = () => {
             ))}
           </ul>
 
-          <Button className="group bg-foreground text-background inline-flex h-auto items-center gap-4 rounded-full px-8 py-4 text-lg font-bold transition-transform active:scale-[0.98]">
+          <Button className="group bg-foreground text-background inline-flex h-auto items-center gap-4 rounded-full px-8 py-4 text-lg font-medium transition-transform active:scale-[0.98]">
             {t('driverSplit.cta')}
             <div className="bg-background/20 flex h-8 w-8 items-center justify-center rounded-full transition-transform group-hover:translate-x-1 group-hover:-translate-y-px">
               <svg

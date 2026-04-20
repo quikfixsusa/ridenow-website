@@ -35,7 +35,7 @@ export const Hero = () => {
           </p>
 
           <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
-            <Button className="group bg-foreground text-background inline-flex h-auto items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-bold transition-transform active:scale-[0.98]">
+            <Button className="group bg-foreground text-background inline-flex h-auto items-center justify-center gap-3 rounded-full px-8 py-4 text-lg font-medium transition-transform active:scale-[0.98]">
               {t('hero.ctaPrimary')}
               <div className="bg-background/20 flex h-8 w-8 items-center justify-center rounded-full transition-transform group-hover:translate-x-1">
                 <svg
@@ -56,7 +56,7 @@ export const Hero = () => {
             </Button>
             <Button
               variant="outline"
-              className="border-divider text-foreground hover:bg-foreground/5 h-auto rounded-full px-8 py-4 text-lg font-bold transition-colors"
+              className="border-divider text-foreground hover:bg-foreground/5 h-auto rounded-full px-8 py-4 text-lg font-medium transition-colors"
             >
               {t('hero.ctaSecondary')}
             </Button>

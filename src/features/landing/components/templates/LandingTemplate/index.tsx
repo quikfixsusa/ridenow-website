@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Hero, Features, DriverSplit, AppShowcase } from "../../organisms";
-import { Button } from "@heroui/react";
-import { useLanguage } from "@/shared/hooks";
+import { Hero, Features, DriverSplit, AppShowcase } from '../../organisms';
+import { Button } from '@heroui/react';
+import { useLanguage } from '@/shared/hooks';
 
 export const LandingTemplate: React.FC = () => {
   const { t } = useLanguage();
@@ -17,27 +17,27 @@ export const LandingTemplate: React.FC = () => {
       {/* Footer CTA Section */}
       <section
         id="cta"
-        className="relative w-full py-40 px-6 text-center bg-background flex flex-col items-center justify-center overflow-hidden border-t border-divider/40"
+        className="bg-background border-divider/40 relative flex w-full flex-col items-center justify-center overflow-hidden border-t px-6 py-40 text-center"
       >
-        <div className="absolute inset-0 bg-accent/5 rounded-[100%] scale-[2] -translate-y-1/2 blur-[100px] pointer-events-none"></div>
+        <div className="bg-accent/5 pointer-events-none absolute inset-0 -translate-y-1/2 scale-[2] rounded-[100%] blur-[100px]"></div>
 
-        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
-          <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter text-foreground">
-            {t("ctaSection.title")}
+        <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center">
+          <h2 className="text-foreground font-display mb-8 text-5xl font-black md:text-7xl">
+            {t('ctaSection.title')}
           </h2>
-          <p className="text-xl md:text-2xl text-foreground/60 mb-12 max-w-2xl font-medium">
-            {t("ctaSection.subtitle")}
+          <p className="text-foreground/60 mb-12 max-w-2xl text-xl font-medium md:text-2xl">
+            {t('ctaSection.subtitle')}
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto">
-            <Button className="group px-10 py-5 h-auto rounded-full bg-foreground text-background font-bold text-lg transition-transform active:scale-[0.98]">
-              {t("ctaSection.button")}
+          <div className="flex w-full flex-col justify-center gap-4 sm:w-auto sm:flex-row">
+            <Button className="group bg-foreground text-background h-auto rounded-full px-10 py-5 text-lg font-medium transition-transform active:scale-[0.98]">
+              {t('ctaSection.button')}
             </Button>
             <Button
               variant="outline"
-              className="px-10 py-5 h-auto rounded-full border-divider font-bold text-lg text-foreground hover:bg-foreground/5 transition-colors"
+              className="border-divider text-foreground hover:bg-foreground/5 h-auto rounded-full px-10 py-5 text-lg font-medium transition-colors"
             >
-              {t("ctaSection.altButton")}
+              {t('ctaSection.altButton')}
             </Button>
           </div>
         </div>
