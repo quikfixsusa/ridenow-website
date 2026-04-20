@@ -48,6 +48,11 @@
     "title": "Todo lo que necesitas. Nada de lo que sobra.",
     "description": "Nuestra app está diseñada milimétricamente para conseguirte un viaje en menos de tres toques. Sin desorden, sin anuncios, solo funcionalidad perfecta."
   },
+  "rideCarousel": {
+    "title": "Elige tu viaje",
+    "subtitle": "Descubre el vehículo perfecto para cada ocasión, desde traslados diarios hasta tareas de carga pesada.",
+    "priceFrom": "Desde {{price}}"
+  },
   "ctaSection": {
     "title": "¿Listo para moverte?",
     "subtitle": "Únete a miles de pasajeros y conductores satisfechos hoy. Transporte rápido, seguro y confiable.",

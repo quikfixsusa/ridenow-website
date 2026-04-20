@@ -1,6 +1,12 @@
 'use client';
 
-import { Hero, Features, DriverSplit, AppShowcase } from '../../organisms';
+import {
+  Hero,
+  Features,
+  DriverSplit,
+  AppShowcase,
+  RideCarousel,
+} from '../../organisms';
 import { Button } from '@heroui/react';
 import { useLanguage } from '@/shared/hooks';
 
@@ -11,6 +17,7 @@ export const LandingTemplate: React.FC = () => {
     <main className="w-full flex-col items-center">
       <Hero />
       <Features />
+      <RideCarousel />
       <DriverSplit />
       <AppShowcase />
 

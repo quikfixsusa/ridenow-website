@@ -48,6 +48,11 @@
     "title": "Everything you need. Nothing you don't.",
     "description": "Our app is precision-engineered to get you a ride in under three taps. No clutter, no ads, just seamless functionality."
   },
+  "rideCarousel": {
+    "title": "Choose your ride",
+    "subtitle": "Discover the perfect vehicle for every occasion, from daily commutes to heavy-duty tasks.",
+    "priceFrom": "From {{price}}"
+  },
   "ctaSection": {
     "title": "Ready to move?",
     "subtitle": "Join thousands of satisfied riders and drivers today. Fast, safe, and reliable transportation.",

@@ -102,7 +102,7 @@ export const Hero = () => {
         </div>
 
         {/* Right: Mockup Image/Graphic (Double-Bezel) */}
-        <div className="flex items-end justify-end">
+        <div className="flex items-end justify-center lg:justify-end">
           <Image
             src={require('../../../../../../public/images/mockup-home.png')}
             alt="Hero Mockup"
