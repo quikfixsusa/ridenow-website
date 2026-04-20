@@ -13,10 +13,15 @@
   },
   "hero": {
     "title1": "Redefining",
-    "title2": "Urban Mobility",
+    "title2": "urban",
+    "title3": "mobility",
     "subtitle": "RideNow provides premium, secure, and fast transportation at your fingertips. Because your time is your most valuable asset.",
-    "ctaPrimary": "Download App",
-    "ctaSecondary": "Become a Driver"
+    "ctaPrimary": "Get it on App Store",
+    "ctaSecondary": "Get it on Play Store",
+    "downloadOn": "Download on",
+    "getItOn": "Get it on",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
   },
   "features": {
     "eyebrow": "THE ADVANTAGE",

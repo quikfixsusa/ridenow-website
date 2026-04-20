@@ -12,11 +12,16 @@
     "langES": "Español"
   },
   "hero": {
-    "title1": "Redefiniendo la",
-    "title2": "Movilidad Urbana",
+    "title1": "Redefiniendo",
+    "title2": "la movilidad",
+    "title3": "urbana",
     "subtitle": "RideNow ofrece transporte premium, seguro y rápido al alcance de tu mano. Porque tu tiempo es tu activo más valioso.",
-    "ctaPrimary": "Descargar App",
-    "ctaSecondary": "Ser Conductor"
+    "ctaPrimary": "Obtener en App Store",
+    "ctaSecondary": "Obtener en Play Store",
+    "downloadOn": "Descargar en",
+    "getItOn": "Disponible en",
+    "appStore": "App Store",
+    "googlePlay": "Google Play"
   },
   "features": {
     "eyebrow": "NUESTRA VENTAJA",
