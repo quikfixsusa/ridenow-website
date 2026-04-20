@@ -1,24 +1,70 @@
 {
-  "common": {
-    "welcome": "Bienvenido",
-    "changeLanguage": "Cambiar Idioma"
+  "header": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "login": "Iniciar Sesión",
+    "getStarted": "Empezar",
+    "themeLight": "Modo Claro",
+    "themeDark": "Modo Oscuro",
+    "langEN": "English",
+    "langES": "Español"
   },
-  "landing": {
-    "hero": {
-      "title": "RideNow: Tu Viaje, Simplificado",
-      "subtitle": "Consigue un transporte confiable en minutos. Rápido, seguro y siempre disponible cuando lo necesites.",
-      "cta": "Empezar a Viajar"
-    },
-    "features": {
-      "fastTitle": "Velocidad Relámpago",
-      "fastDesc": "No esperes mucho por un viaje gracias a nuestro algoritmo optimizado.",
-      "safeTitle": "Seguridad Primero",
-      "safeDesc": "Conductores verificados y seguimiento del viaje en tiempo real para tu tranquilidad.",
-      "availableTitle": "Siempre Listo",
-      "availableDesc": "Servicio 24/7 en toda la ciudad, estés donde estés."
-    },
-    "footer": {
-      "rights": "Todos los derechos reservados. RideNow 2026."
-    }
+  "hero": {
+    "title1": "Redefiniendo la",
+    "title2": "Movilidad Urbana",
+    "subtitle": "RideNow ofrece transporte premium, seguro y rápido al alcance de tu mano. Porque tu tiempo es tu activo más valioso.",
+    "ctaPrimary": "Descargar App",
+    "ctaSecondary": "Ser Conductor"
+  },
+  "features": {
+    "eyebrow": "NUESTRA VENTAJA",
+    "title": "Diseñado para la excelencia",
+    "f1Title": "Conductores Verificados",
+    "f1Desc": "Cada conductor pasa por estrictas revisiones de antecedentes y evaluación continua de desempeño.",
+    "f2Title": "Rastreo en Tiempo Real",
+    "f2Desc": "Comparte tu ubicación exacta con tus seres queridos y sigue tu viaje segundo a segundo.",
+    "f3Title": "Pagos Seguros",
+    "f3Desc": "Sin efectivo, sin fricción y encriptado. Paga de forma segura a través de la app sin tarifas ocultas.",
+    "f4Title": "Soporte 24/7",
+    "f4Desc": "Nuestro equipo de respuesta exclusivo siempre está en línea, garantizando tu seguridad a toda hora."
+  },
+  "driverSplit": {
+    "badge": "PARA CONDUCTORES",
+    "title": "Conduce bajo tus propias reglas",
+    "description": "Convierte tu vehículo en una fuente confiable de ingresos. Disfruta de horarios flexibles, ganancias transparentes y una estructura de comisiones líder en la industria. Respetamos tu autonomía.",
+    "bullet1": "Conserva el 85% de las tarifas estándar",
+    "bullet2": "Pagos semanales instantáneos",
+    "bullet3": "Cobertura de seguro premium",
+    "cta": "Aplica para Conducir"
+  },
+  "appShowcase": {
+    "title": "Todo lo que necesitas. Nada de lo que sobra.",
+    "description": "Nuestra app está diseñada milimétricamente para conseguirte un viaje en menos de tres toques. Sin desorden, sin anuncios, solo funcionalidad perfecta."
+  },
+  "ctaSection": {
+    "title": "¿Listo para moverte?",
+    "subtitle": "Únete a miles de pasajeros y conductores satisfechos hoy. Transporte rápido, seguro y confiable.",
+    "button": "Comenzar Ahora",
+    "altButton": "Saber Más"
+  },
+  "footer": {
+    "desc": "Viajes seguros, confiables y cómodos a donde sea, a la hora que sea. Tu aliado de transporte premium.",
+    "services": "Servicios",
+    "s1": "Viajes en Ciudad",
+    "s2": "Traslado al Aeropuerto",
+    "s3": "Viaje Corporativo",
+    "s4": "Conductor Privado",
+    "company": "Compañía",
+    "c1": "Nosotros",
+    "c2": "Carreras",
+    "c3": "Contacto",
+    "c4": "Prensa",
+    "legal": "Legal",
+    "l1": "Términos de Uso",
+    "l2": "Política de Privacidad",
+    "l3": "Política de Cookies",
+    "rights": "RIDE NOW TAXIS, Inc. Todos los derechos reservados."
   }
 }

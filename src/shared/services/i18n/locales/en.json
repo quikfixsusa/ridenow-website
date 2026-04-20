@@ -1,24 +1,70 @@
 {
-  "common": {
-    "welcome": "Welcome",
-    "changeLanguage": "Change Language"
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "login": "Login",
+    "getStarted": "Get Started",
+    "themeLight": "Light Mode",
+    "themeDark": "Dark Mode",
+    "langEN": "English",
+    "langES": "Español"
   },
-  "landing": {
-    "hero": {
-      "title": "RideNow: Your Journey, Simplified",
-      "subtitle": "Get a reliable ride in minutes. Fast, safe, and always available when you need it.",
-      "cta": "Start Riding"
-    },
-    "features": {
-      "fastTitle": "Lightning Fast",
-      "fastDesc": "Never wait long for a ride with our optimized matching algorithm.",
-      "safeTitle": "Safety First",
-      "safeDesc": "Verified drivers and real-time trip tracking for your peace of mind.",
-      "availableTitle": "Always Ready",
-      "availableDesc": "24/7 service across the city, wherever you are."
-    },
-    "footer": {
-      "rights": "All rights reserved. RideNow 2026."
-    }
+  "hero": {
+    "title1": "Redefining",
+    "title2": "Urban Mobility",
+    "subtitle": "RideNow provides premium, secure, and fast transportation at your fingertips. Because your time is your most valuable asset.",
+    "ctaPrimary": "Download App",
+    "ctaSecondary": "Become a Driver"
+  },
+  "features": {
+    "eyebrow": "THE ADVANTAGE",
+    "title": "Engineered for excellence",
+    "f1Title": "Verified Drivers",
+    "f1Desc": "Every driver undergoes rigorous background checks and continuous performance evaluation.",
+    "f2Title": "Real-time Tracking",
+    "f2Desc": "Share your exact location with loved ones and track your ride down to the second.",
+    "f3Title": "Secure Payments",
+    "f3Desc": "Cashless, frictionless, and encrypted. Pay safely via the app without hidden fees.",
+    "f4Title": "24/7 Support",
+    "f4Desc": "Our dedicated response team is always online, ensuring your safety around the clock."
+  },
+  "driverSplit": {
+    "badge": "FOR DRIVERS",
+    "title": "Drive on your own terms",
+    "description": "Turn your vehicle into a reliable source of income. Enjoy flexible hours, transparent earnings, and an industry-leading commission structure. We respect your autonomy.",
+    "bullet1": "Keep 85% of standard fares",
+    "bullet2": "Instant weekly payouts",
+    "bullet3": "Premium insurance coverage",
+    "cta": "Apply to Drive"
+  },
+  "appShowcase": {
+    "title": "Everything you need. Nothing you don't.",
+    "description": "Our app is precision-engineered to get you a ride in under three taps. No clutter, no ads, just seamless functionality."
+  },
+  "ctaSection": {
+    "title": "Ready to move?",
+    "subtitle": "Join thousands of satisfied riders and drivers today. Fast, safe, and reliable transportation.",
+    "button": "Get Started Now",
+    "altButton": "Learn More"
+  },
+  "footer": {
+    "desc": "Safe, reliable, and comfortable rides anywhere, anytime. Your premium transportation partner.",
+    "services": "Services",
+    "s1": "City Rides",
+    "s2": "Airport Transfer",
+    "s3": "Corporate Travel",
+    "s4": "Private Driver",
+    "company": "Company",
+    "c1": "About Us",
+    "c2": "Careers",
+    "c3": "Contact",
+    "c4": "Press",
+    "legal": "Legal",
+    "l1": "Terms of Use",
+    "l2": "Privacy Policy",
+    "l3": "Cookie Policy",
+    "rights": "RIDE NOW TAXIS, Inc. All rights reserved."
   }
 }

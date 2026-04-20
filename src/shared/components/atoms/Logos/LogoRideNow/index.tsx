@@ -6,7 +6,7 @@ export const LogoRideNow = ({ size = 24, className }: LogoRideNowProps) => {
       <defs>
         <style>
           {`.cls-1 {
-        fill: #fff;
+        fill: var(--background, #fff);
       }
 
       .cls-2 {
@@ -14,16 +14,8 @@ export const LogoRideNow = ({ size = 24, className }: LogoRideNowProps) => {
       }
 
       .cls-3 {
-        fill: #1d1d1b;
+        fill: var(--foreground, #1d1d1b);
       }
-
-      @media (prefers-color-scheme: dark) {
-        .cls-1 { fill: #1d1d1b; }
-        .cls-3 { fill: #fff; }
-      }
-      
-      :global(.dark) .cls-1 { fill: #1d1d1b; }
-      :global(.dark) .cls-3 { fill: #fff; }
       `}
         </style>
       </defs>
