@@ -84,7 +84,7 @@ export const RideCarousel: React.FC = () => {
   return (
     <section
       ref={containerRef}
-      className="bg-background relative w-full overflow-hidden py-32 md:py-48"
+      className="bg-background relative w-full overflow-hidden py-8 md:py-16"
     >
       <div className="mx-auto max-w-7xl px-6">
         {/* Header content */}
