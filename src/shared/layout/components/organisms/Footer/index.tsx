@@ -39,11 +39,12 @@ export const Footer = ({ className }: FooterProps) => {
   ];
 
   return (
-    <footer className={`bg-background text-foreground py-24 px-6 border-t border-divider ${className}`}>
+    <footer
+      className={`bg-background text-foreground py-24 px-6 border-t border-divider ${className}`}
+    >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-16 md:gap-8">
-        
         {/* Brand Column */}
-        <div className="flex flex-col gap-6 md:w-1/3">
+        <div className="flex flex-col items-start gap-6 md:w-1/3">
           <LogoRideNow size={48} />
           <p className="text-foreground/60 text-base leading-relaxed max-w-sm">
             {t("footer.desc")}
@@ -60,7 +61,10 @@ export const Footer = ({ className }: FooterProps) => {
               <ul className="flex flex-col gap-3">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <Link href={link.href} className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors">
+                    <Link
+                      href={link.href}
+                      className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                    >
                       {link.name}
                     </Link>
                   </li>
@@ -76,13 +80,22 @@ export const Footer = ({ className }: FooterProps) => {
           © {new Date().getFullYear()} {t("footer.rights")}
         </p>
         <div className="flex gap-6">
-          <Link href="#" className="text-foreground/40 hover:text-foreground transition-colors text-sm">
+          <Link
+            href="#"
+            className="text-foreground/40 hover:text-foreground transition-colors text-sm"
+          >
             Twitter
           </Link>
-          <Link href="#" className="text-foreground/40 hover:text-foreground transition-colors text-sm">
+          <Link
+            href="#"
+            className="text-foreground/40 hover:text-foreground transition-colors text-sm"
+          >
             Instagram
           </Link>
-          <Link href="#" className="text-foreground/40 hover:text-foreground transition-colors text-sm">
+          <Link
+            href="#"
+            className="text-foreground/40 hover:text-foreground transition-colors text-sm"
+          >
             LinkedIn
           </Link>
         </div>
