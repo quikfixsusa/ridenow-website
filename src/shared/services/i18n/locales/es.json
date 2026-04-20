@@ -76,5 +76,39 @@
     "l2": "Política de Privacidad",
     "l3": "Política de Cookies",
     "rights": "RIDE NOW TAXIS, Inc. Todos los derechos reservados."
+  },
+  "about": {
+    "hero": {
+      "title": "Nuestra Historia",
+      "subtitle": "Mucho más que una app de viajes: somos tu socio estratégico en movilidad y logística urbana."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "desc": "RideNow nació con la visión de simplificar la vida en la ciudad. Creemos en una movilidad inteligente que no solo transporte personas, sino que mueva oportunidades y resuelva necesidades logísticas de manera eficiente y segura."
+    },
+    "services": {
+      "title": "Nuestra Versatilidad",
+      "shared": {
+        "title": "Viajes Compartidos",
+        "desc": "Optimiza tus traslados diarios compartiendo tu ruta. Una forma inteligente de moverte por la ciudad ahorrando dinero y reduciendo la huella de carbono."
+      },
+      "packages": {
+        "title": "Envío de Paquetes",
+        "desc": "Rápido, seguro y confiable. Envía documentos o paquetes ligeros a cualquier punto de la ciudad con seguimiento en tiempo real."
+      },
+      "cargo": {
+        "title": "Carga en Vans y Pickups",
+        "desc": "¿Mudanza o mercancía pesada? Contamos con una flota especializada para transportar grandes volúmenes con el cuidado y la profesionalidad que mereces."
+      }
+    },
+    "values": {
+      "title": "Por qué elegir RideNow",
+      "v1": "Seguridad Total",
+      "v1Desc": "Conductores verificados y soporte constante.",
+      "v2": "Eficiencia Real",
+      "v2Desc": "Algoritmos avanzados para rutas más rápidas.",
+      "v3": "Versatilidad",
+      "v3Desc": "Desde un viaje corto hasta carga pesada."
+    }
   }
 }

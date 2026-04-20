@@ -76,5 +76,39 @@
     "l2": "Privacy Policy",
     "l3": "Cookie Policy",
     "rights": "RIDE NOW TAXIS, Inc. All rights reserved."
+  },
+  "about": {
+    "hero": {
+      "title": "Our Story",
+      "subtitle": "More than just a ride-hailing app: we are your strategic partner in urban mobility and logistics."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "desc": "RideNow was born with a vision to simplify city life. We believe in smart mobility that doesn't just transport people, but moves opportunities and solves logistics needs efficiently and safely."
+    },
+    "services": {
+      "title": "Our Versatility",
+      "shared": {
+        "title": "Shared Rides",
+        "desc": "Optimize your daily commutes by sharing your route. A smart way to move around the city while saving money and reducing your carbon footprint."
+      },
+      "packages": {
+        "title": "Package Delivery",
+        "desc": "Fast, secure, and reliable. Send documents or light packages anywhere in the city with real-time tracking."
+      },
+      "cargo": {
+        "title": "Vans & Pickups Cargo",
+        "desc": "Moving or heavy goods? We have a specialized fleet to transport large volumes with the care and professionalism you deserve."
+      }
+    },
+    "values": {
+      "title": "Why Choose RideNow",
+      "v1": "Total Security",
+      "v1Desc": "Verified drivers and constant support.",
+      "v2": "Real Efficiency",
+      "v2Desc": "Advanced algorithms for faster routes.",
+      "v3": "Versatility",
+      "v3Desc": "From a short ride to heavy cargo."
+    }
   }
 }
