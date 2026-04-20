@@ -7,7 +7,7 @@ import { useLanguage, useConfigStore } from "@/shared/hooks";
 import { HeaderProps } from "./types";
 
 export const Header = ({ className }: HeaderProps) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { t, language, changeLanguage } = useLanguage();
   const { theme, setTheme } = useConfigStore();
 

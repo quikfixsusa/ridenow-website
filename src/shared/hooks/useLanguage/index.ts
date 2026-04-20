@@ -2,11 +2,20 @@
 
 import { useTranslation } from 'react-i18next';
 import { useConfigStore } from '../useConfigStore';
-import { useCallback, useEffect } from 'react';
+import React, { useCallback, useEffect } from 'react';
+
+const emptySubscribe = () => () => {};
 
 export const useLanguage = () => {
   const { i18n } = useTranslation();
-  const { language, setLanguage: setStoreLanguage } = useConfigStore();
+  const { language: storedLanguage, setLanguage: setStoreLanguage } = useConfigStore();
+  
+  // Modern way to detect hydration without triggering synchronous cascading renders
+  const isMounted = React.useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
 
   const changeLanguage = useCallback(
     async (newLang: string) => {
@@ -18,10 +27,13 @@ export const useLanguage = () => {
 
   // Sync i18n with store on mount or store change (e.g. from localStorage)
   useEffect(() => {
-    if (i18n.language !== language) {
-      i18n.changeLanguage(language);
+    if (isMounted && i18n.language !== storedLanguage) {
+      i18n.changeLanguage(storedLanguage);
     }
-  }, [i18n, language]);
+  }, [i18n, storedLanguage, isMounted]);
+
+  // If not mounted, return the "safe" server-side language (English)
+  const language = isMounted ? storedLanguage : "en";
 
   return {
     language,
