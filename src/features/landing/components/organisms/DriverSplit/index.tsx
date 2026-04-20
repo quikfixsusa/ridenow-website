@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from '@heroui/react';
 import { useLanguage, useIntersectionObserver } from '@/shared/hooks';
+import Image from 'next/image';
 
 export const DriverSplit = () => {
   const { t } = useLanguage();
@@ -81,53 +82,11 @@ export const DriverSplit = () => {
         </div>
 
         {/* Right Column: Physical Mockup Card (Double-Bezel) */}
-        <div className="relative flex h-[600px] w-full items-center justify-center md:w-1/2">
-          <div className="bg-accent/5 absolute inset-0 scale-105 -rotate-3 rounded-[3rem] blur-2xl transition-all duration-1000 ease-out"></div>
-
-          <div className="bg-foreground/5 ring-foreground/10 ease-out-fluid relative h-full w-full max-w-md rotate-2 transform rounded-[2.5rem] p-2 shadow-2xl ring-1 backdrop-blur-md transition-transform duration-700 hover:rotate-0">
-            <div className="bg-surface relative flex h-full w-full flex-col justify-between overflow-hidden rounded-[calc(2.5rem-0.5rem)] p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
-              <div className="w-full">
-                <div className="bg-accent text-accent-foreground shadow-accent/30 mb-6 flex h-16 w-16 items-center justify-center rounded-full shadow-lg">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="32"
-                    height="32"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
-                    <path d="M15 18H9"></path>
-                    <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
-                    <circle cx="17" cy="18" r="2"></circle>
-                    <circle cx="7" cy="18" r="2"></circle>
-                  </svg>
-                </div>
-                <h3 className="font-display text-foreground mb-2 text-3xl font-bold tracking-tight">
-                  $1,240.50
-                </h3>
-                <p className="text-foreground/50 text-sm font-medium">
-                  This week&apos;s earnings
-                </p>
-              </div>
-
-              <div className="w-full space-y-4">
-                <div className="bg-foreground/5 h-16 w-full animate-pulse rounded-2xl"></div>
-                <div
-                  className="bg-foreground/5 h-16 w-full animate-pulse rounded-2xl"
-                  style={{ animationDelay: '150ms' }}
-                ></div>
-                <div
-                  className="bg-foreground/5 h-16 w-full animate-pulse rounded-2xl"
-                  style={{ animationDelay: '300ms' }}
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Image
+          src={require('../../../../../../public/images/earns-mockup.png')}
+          alt="Driver Mockup"
+          className="ease-out-fluid relative h-full w-full max-w-md rotate-2 transform rounded-[2.5rem] shadow-2xl backdrop-blur-md transition-transform duration-700 hover:rotate-0"
+        />
       </div>
     </section>
   );
