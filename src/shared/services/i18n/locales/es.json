@@ -136,5 +136,39 @@
       "email": "soporte@ridenow.com",
       "social": "Síguenos"
     }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Soluciones expertas",
+      "title": "Nuestros Servicios",
+      "subtitle": "Descubre todo lo que RideNow tiene para ofrecer. Desde tus viajes diarios hasta logística pesada.",
+      "cta": "Explorar Servicios"
+    },
+    "card": {
+      "serviceLabel": "Servicio",
+      "learnMore": "Saber Más",
+      "features": {
+        "shared": [
+          "Conductores Verificados",
+          "Rastreo en Tiempo Real",
+          "Ecológico"
+        ],
+        "packages": [
+          "Entrega Express",
+          "Manejo Seguro",
+          "Prueba de Entrega"
+        ],
+        "cargo": [
+          "Gran Capacidad",
+          "Elevador Hidráulico",
+          "Servicio el Mismo Día"
+        ]
+      }
+    },
+    "cta": {
+      "title": "¿Listo para empezar?",
+      "subtitle": "Únete a miles de usuarios que confían en nuestra red cada día.",
+      "button": "Descargar la App"
+    }
   }
 }

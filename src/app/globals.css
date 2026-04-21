@@ -90,3 +90,57 @@ body {
   scrollbar-color: var(--divider) transparent;
 }
 
+
+/* Premium Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-in {
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+
+.slide-in-from-bottom-4 {
+  animation-name: slideInFromBottom;
+  --tw-enter-translate-y: 1rem;
+}
+
+.slide-in-from-bottom-8 {
+  animation-name: slideInFromBottom;
+  --tw-enter-translate-y: 2rem;
+}
+
+.slide-in-from-bottom-12 {
+  animation-name: slideInFromBottom;
+  --tw-enter-translate-y: 3rem;
+}
+
+.slide-in-from-bottom-16 {
+  animation-name: slideInFromBottom;
+  --tw-enter-translate-y: 4rem;
+}
+
+.slide-in-from-bottom-24 {
+  animation-name: slideInFromBottom;
+  --tw-enter-translate-y: 6rem;
+}
+
+.duration-1000 {
+  animation-duration: 1000ms;
+}
+
+.fill-mode-both {
+  animation-fill-mode: both;
+}

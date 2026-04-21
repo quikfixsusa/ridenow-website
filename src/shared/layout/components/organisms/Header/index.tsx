@@ -12,7 +12,7 @@ export const Header = ({ className }: HeaderProps) => {
   const { theme, setTheme } = useConfigStore();
 
   const menuItems = [
-    { name: t('header.services'), href: '/#services' },
+    { name: t('header.services'), href: '/services' },
     { name: t('header.about'), href: '/about' },
     { name: t('header.contact'), href: '/contact' },
   ];

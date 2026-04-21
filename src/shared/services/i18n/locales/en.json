@@ -136,5 +136,39 @@
       "email": "support@ridenow.com",
       "social": "Follow us"
     }
+  },
+  "servicesPage": {
+    "hero": {
+      "badge": "Expert solutions",
+      "title": "Our Services",
+      "subtitle": "Discover everything RideNow has to offer. From everyday commutes to heavy logistics, we have you covered.",
+      "cta": "Explore Services"
+    },
+    "card": {
+      "serviceLabel": "Service",
+      "learnMore": "Learn More",
+      "features": {
+        "shared": [
+          "Verified Drivers",
+          "Real-time Tracking",
+          "Eco-friendly"
+        ],
+        "packages": [
+          "Express Delivery",
+          "Secure Handling",
+          "Proof of Delivery"
+        ],
+        "cargo": [
+          "Large Capacity",
+          "Hydraulic Lift",
+          "Same-day Service"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to get moving?",
+      "subtitle": "Join thousands of users who trust our network every day.",
+      "button": "Download the App"
+    }
   }
 }
