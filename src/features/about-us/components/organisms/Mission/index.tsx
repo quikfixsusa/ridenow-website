@@ -38,7 +38,7 @@ export const Mission = () => {
             {/* Quote or highlight */}
             <div className="bg-background/40 absolute right-8 bottom-8 left-8 rounded-2xl p-6 backdrop-blur-md">
               <p className="text-sm font-medium italic">
-                "Moviendo personas, impulsando el futuro."
+                &quot;Moviendo personas, impulsando el futuro.&quot;
               </p>
             </div>
           </div>
