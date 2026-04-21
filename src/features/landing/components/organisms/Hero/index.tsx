@@ -106,6 +106,7 @@ export const Hero = () => {
           <Image
             src={require('../../../../../../public/images/mockup-home.png')}
             alt="Hero Mockup"
+            priority
             className={`ease-out-fluid relative flex h-[650px] w-auto items-center justify-center transition-all delay-300 duration-1000 lg:justify-end ${
               isIntersecting
                 ? 'translate-x-0 opacity-100'
