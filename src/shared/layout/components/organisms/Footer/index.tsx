@@ -22,9 +22,9 @@ export const Footer = ({ className }: FooterProps) => {
     {
       title: t("footer.company"),
       links: [
-        { name: t("footer.c1"), href: "#" },
+        { name: t("footer.c1"), href: "/about" },
         { name: t("footer.c2"), href: "#" },
-        { name: t("footer.c3"), href: "#" },
+        { name: t("footer.c3"), href: "/contact" },
         { name: t("footer.c4"), href: "#" },
       ],
     },

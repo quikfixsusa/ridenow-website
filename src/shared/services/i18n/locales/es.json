@@ -110,5 +110,31 @@
       "v3": "Versatilidad",
       "v3Desc": "Desde un viaje corto hasta carga pesada."
     }
+  },
+  "contact": {
+    "hero": {
+      "title": "Ponte en Contacto",
+      "subtitle": "¿Tienes preguntas o necesitas ayuda? Nuestro equipo está aquí para ayudarte 24/7."
+    },
+    "form": {
+      "title": "Enviamos un mensaje",
+      "name": "Nombre Completo",
+      "namePlaceholder": "Juan Pérez",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "juan@ejemplo.com",
+      "subject": "Asunto",
+      "subjectPlaceholder": "¿Cómo podemos ayudarte?",
+      "message": "Mensaje",
+      "messagePlaceholder": "Escribe tu mensaje aquí...",
+      "send": "Enviar Mensaje",
+      "success": "¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "address": "Calle Movilidad 123, Oficina 100, Ciudad Tecnológica, CT 12345",
+      "phone": "+1 (555) 000-0000",
+      "email": "soporte@ridenow.com",
+      "social": "Síguenos"
+    }
   }
 }
