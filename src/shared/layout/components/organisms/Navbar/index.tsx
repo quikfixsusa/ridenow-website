@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useState, useEffect } from "react";
-import { Link, Button } from "@heroui/react";
-import { LogoRideNow, IconRideNow } from "@/shared/components/atoms";
-import { NavbarProps } from "./types";
+import React, { useState, useEffect } from 'react';
+import { Link, Button } from '@heroui/react';
+import { LogoRideNow, IconRideNow } from '@/shared/components/atoms';
+import { NavbarProps } from './types';
 
 export const Navbar = ({ className }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,23 +13,23 @@ export const Navbar = ({ className }: NavbarProps) => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const menuItems = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/services' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isScrolled || isMenuOpen
-          ? "bg-background/80 backdrop-blur-md border-b border-divider"
-          : "bg-transparent"
+          ? 'bg-background/80 border-divider border-b backdrop-blur-md'
+          : 'bg-transparent'
       } ${className}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
@@ -49,12 +49,12 @@ export const Navbar = ({ className }: NavbarProps) => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 justify-center gap-8">
+        <nav className="hidden flex-1 justify-center gap-8 md:flex">
           {menuItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+              className="text-foreground hover:text-primary text-sm font-medium transition-colors"
             >
               {item.name}
             </Link>
@@ -62,17 +62,17 @@ export const Navbar = ({ className }: NavbarProps) => {
         </nav>
 
         {/* Actions */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden items-center gap-4 md:flex">
           <Link
             href="/login"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            className="text-foreground hover:text-primary text-sm font-medium transition-colors"
           >
             Login
           </Link>
           <Button
             size="md"
             variant="primary"
-            className="font-semibold shadow-lg shadow-primary/20"
+            className="shadow-primary/20 font-semibold shadow-lg"
           >
             Get Started
           </Button>
@@ -80,9 +80,9 @@ export const Navbar = ({ className }: NavbarProps) => {
 
         {/* Mobile Toggle */}
         <button
-          className="flex md:hidden p-2 text-foreground transition-transform active:scale-95"
+          className="text-foreground flex p-2 transition-transform active:scale-95 md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
         >
           {isMenuOpen ? (
             <svg
@@ -121,8 +121,8 @@ export const Navbar = ({ className }: NavbarProps) => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-x-0 bottom-0 top-[65px] z-40 bg-background/95 backdrop-blur-lg transition-transform duration-300 md:hidden ${
-          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`bg-background/95 fixed inset-x-0 top-[65px] bottom-0 z-40 backdrop-blur-lg transition-transform duration-300 md:hidden ${
+          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className="flex flex-col gap-6 p-8">
@@ -130,7 +130,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             <Link
               key={item.name}
               href={item.href}
-              className="text-2xl font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-foreground hover:text-primary text-2xl font-semibold transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               {item.name}
@@ -140,9 +140,11 @@ export const Navbar = ({ className }: NavbarProps) => {
             <Button size="lg" variant="primary" className="w-full font-bold">
               Get Started
             </Button>
-            <Button size="lg" variant="ghost" className="w-full font-bold">
-              Login
-            </Button>
+            <Link href="/login">
+              <Button size="lg" variant="ghost" className="w-full font-bold">
+                Login
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -165,5 +165,12 @@
       "subtitle": "Únete a miles de usuarios que confían en nuestra red cada día.",
       "button": "Descargar la App"
     }
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar Sesión",
+      "comingSoon": "Disponible Próximamente",
+      "description": "Estamos trabajando arduamente para traerte la mejor experiencia de usuario."
+    }
   }
 }

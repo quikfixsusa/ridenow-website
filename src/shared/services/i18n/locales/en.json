@@ -165,5 +165,12 @@
       "subtitle": "Join thousands of users who trust our network every day.",
       "button": "Download the App"
     }
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "comingSoon": "Coming Soon",
+      "description": "We are working hard to bring you the best user experience."
+    }
   }
 }
