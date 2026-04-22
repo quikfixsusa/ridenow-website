@@ -9,8 +9,8 @@ export const ContactPage = () => {
   const { t } = useLanguage();
 
   return (
-    <main className="flex min-h-screen w-full flex-col">
-      <section className="relative px-4 pt-40 pb-24 md:pt-48 md:pb-32">
+    <main className="flex min-h-screen w-full flex-col overflow-x-hidden">
+      <section className="relative overflow-hidden px-4 pt-40 pb-24 md:pt-48 md:pb-32">
         {/* Background Elements */}
         <div className="bg-primary/5 absolute top-0 -left-64 h-[500px] w-[500px] rounded-full blur-3xl" />
         <div className="bg-foreground/2 absolute -right-64 bottom-0 h-[600px] w-[600px] rounded-full blur-3xl" />
