@@ -4,6 +4,7 @@ import React from 'react';
 import { useLanguage } from '@/shared/hooks';
 
 interface ServiceCardProps {
+  id?: string;
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -13,6 +14,7 @@ interface ServiceCardProps {
 }
 
 export const ServiceCard = ({
+  id,
   title,
   description,
   icon,
@@ -24,7 +26,8 @@ export const ServiceCard = ({
 
   return (
     <div
-      className={`flex flex-col gap-12 md:flex-row md:items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} animate-in fade-in slide-in-from-bottom-24 fill-mode-both duration-1000`}
+      id={id}
+      className={`flex flex-col gap-12 md:flex-row md:items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} animate-in fade-in slide-in-from-bottom-24 fill-mode-both duration-1000 scroll-mt-24`}
       style={{ animationDelay: `${index * 150}ms` }}
     >
       {/* Visual Part */}

@@ -13,19 +13,16 @@ export const Footer = ({ className }: FooterProps) => {
     {
       title: t("footer.services"),
       links: [
-        { name: t("footer.s1"), href: "/services" },
-        { name: t("footer.s2"), href: "#" },
-        { name: t("footer.s3"), href: "#" },
-        { name: t("footer.s4"), href: "#" },
+        { name: t("about.services.shared.title"), href: "/services#shared-rides" },
+        { name: t("about.services.packages.title"), href: "/services#package-delivery" },
+        { name: t("about.services.cargo.title"), href: "/services#cargo-transport" },
       ],
     },
     {
       title: t("footer.company"),
       links: [
         { name: t("footer.c1"), href: "/about" },
-        { name: t("footer.c2"), href: "#" },
         { name: t("footer.c3"), href: "/contact" },
-        { name: t("footer.c4"), href: "#" },
       ],
     },
     {

@@ -9,6 +9,7 @@ export const ServicesList = () => {
 
   const services = [
     {
+      id: 'shared-rides',
       title: t('about.services.shared.title'),
       description: t('about.services.shared.desc'),
       icon: (
@@ -22,6 +23,7 @@ export const ServicesList = () => {
       features: t('servicesPage.card.features.shared', { returnObjects: true }) as string[],
     },
     {
+      id: 'package-delivery',
       title: t('about.services.packages.title'),
       description: t('about.services.packages.desc'),
       icon: (
@@ -34,6 +36,7 @@ export const ServicesList = () => {
       features: t('servicesPage.card.features.packages', { returnObjects: true }) as string[],
     },
     {
+      id: 'cargo-transport',
       title: t('about.services.cargo.title'),
       description: t('about.services.cargo.desc'),
       icon: (
@@ -56,6 +59,7 @@ export const ServicesList = () => {
           {services.map((svc, i) => (
             <ServiceCard 
               key={i} 
+              id={svc.id}
               index={i}
               title={svc.title}
               description={svc.description}
