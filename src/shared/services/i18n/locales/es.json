@@ -78,7 +78,8 @@
     },
     "mission": {
       "title": "Nuestra Misión",
-      "desc": "RideNow nació con la visión de simplificar la vida en la ciudad. Creemos en una movilidad inteligente que no solo transporte personas, sino que mueva oportunidades y resuelva necesidades logísticas de manera eficiente y segura."
+      "desc": "RideNow nació con la visión de simplificar la vida en la ciudad. Creemos en una movilidad inteligente que no solo transporte personas, sino que mueva oportunidades y resuelva necesidades logísticas de manera eficiente y segura.",
+      "quote": "Moviendo personas, impulsando el futuro."
     },
     "services": {
       "title": "Nuestra Versatilidad",
@@ -96,13 +97,13 @@
       }
     },
     "values": {
-      "title": "Por qué elegir RideNow",
-      "v1": "Seguridad Total",
-      "v1Desc": "Conductores verificados y soporte constante.",
-      "v2": "Eficiencia Real",
-      "v2Desc": "Algoritmos avanzados para rutas más rápidas.",
-      "v3": "Versatilidad",
-      "v3Desc": "Desde un viaje corto hasta carga pesada."
+      "title": "Nuestros Valores",
+      "v1": "Seguridad",
+      "v1Desc": "Protocolos rigurosos para cada kilómetro recorrido.",
+      "v2": "Innovación",
+      "v2Desc": "Tecnología al servicio de tus necesidades reales.",
+      "v3": "Compromiso",
+      "v3Desc": "Estamos donde nos necesitas, cuando nos necesitas."
     }
   },
   "contact": {

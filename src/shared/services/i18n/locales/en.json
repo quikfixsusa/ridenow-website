@@ -78,7 +78,8 @@
     },
     "mission": {
       "title": "Our Mission",
-      "desc": "RideNow was born with a vision to simplify city life. We believe in smart mobility that doesn't just transport people, but moves opportunities and solves logistics needs efficiently and safely."
+      "desc": "RideNow was born with a vision to simplify city life. We believe in smart mobility that doesn't just transport people, but moves opportunities and solves logistics needs efficiently and safely.",
+      "quote": "Moving people, driving the future."
     },
     "services": {
       "title": "Our Versatility",
@@ -96,13 +97,13 @@
       }
     },
     "values": {
-      "title": "Why Choose RideNow",
-      "v1": "Total Security",
-      "v1Desc": "Verified drivers and constant support.",
-      "v2": "Real Efficiency",
-      "v2Desc": "Advanced algorithms for faster routes.",
-      "v3": "Versatility",
-      "v3Desc": "From a short ride to heavy cargo."
+      "title": "Our Values",
+      "v1": "Safety",
+      "v1Desc": "Rigorous protocols for every kilometer traveled.",
+      "v2": "Innovation",
+      "v2Desc": "Technology at the service of your real needs.",
+      "v3": "Commitment",
+      "v3Desc": "We are where you need us, when you need us."
     }
   },
   "contact": {
