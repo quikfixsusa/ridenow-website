@@ -126,8 +126,11 @@
     },
     "info": {
       "title": "Contact Information",
-      "address": "123 Mobility St, Suite 100, Tech City, TC 12345",
-      "phone": "+1 (555) 000-0000",
+      "title_address": "Address",
+      "title_phone": "Phone",
+      "title_email": "Email",
+      "address": "7914 Kingspointe Pkwy, Orlando, FL 32819",
+      "phone": "+1 (407) 600-9934",
       "email": "support@ridenow.com",
       "social": "Follow us"
     }

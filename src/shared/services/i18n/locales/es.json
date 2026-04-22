@@ -126,8 +126,11 @@
     },
     "info": {
       "title": "Información de Contacto",
-      "address": "Calle Movilidad 123, Oficina 100, Ciudad Tecnológica, CT 12345",
-      "phone": "+1 (555) 000-0000",
+      "title_address": "Dirección",
+      "title_phone": "Teléfono",
+      "title_email": "Correo",
+      "address": "7914 Kingspointe Pkwy, Orlando, FL 32819",
+      "phone": "+1 (407) 600-9934",
       "email": "soporte@ridenow.com",
       "social": "Síguenos"
     }

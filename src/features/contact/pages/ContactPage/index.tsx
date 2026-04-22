@@ -1,10 +1,13 @@
 'use client';
 
 import React from 'react';
+import { useLanguage } from '@/shared/hooks';
 import ContactForm from '../../components/organisms/ContactForm';
 import ContactInfo from '../../components/organisms/ContactInfo';
 
 export const ContactPage = () => {
+  const { t } = useLanguage();
+
   return (
     <main className="flex min-h-screen w-full flex-col">
       <section className="relative px-4 pt-40 pb-24 md:pt-48 md:pb-32">
@@ -25,7 +28,7 @@ export const ContactPage = () => {
       </section>
 
       {/* Map or secondary section */}
-      <section className="bg-foreground/2 border-foreground/5 relative h-[500px] w-full overflow-hidden border-t border-b">
+      <section className="bg-foreground/2 border-foreground/5 relative h-[500px] w-full overflow-hidden border-y">
         {/* Visual Map Placeholder - High End Aesthetic */}
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&autofromat=fit&crop=entropy')] bg-cover bg-center opacity-40 grayscale transition-opacity duration-1000 hover:opacity-60" />
         <div className="from-background to-background/50 absolute inset-0 bg-linear-to-t via-transparent" />
@@ -48,9 +51,9 @@ export const ContactPage = () => {
                 <circle cx="12" cy="10" r="3" />
               </svg>
             </div>
-            <h4 className="mb-1 text-xl font-bold">RideNow HQ</h4>
+            <h4 className="mb-1 text-xl font-bold">RIDENOW TAXIS INC.</h4>
             <p className="text-foreground/60 text-sm">
-              123 Mobility St, Tech City, TC 12345
+              {t('contact.info.address')}
             </p>
             <div className="mt-4 flex justify-center gap-2">
               <span className="rounded-full border border-green-500/20 bg-green-500/10 px-3 py-1 text-xs font-bold tracking-wider text-green-500 uppercase">
