@@ -163,33 +163,39 @@ export const RideCarousel: React.FC = () => {
           </div>
         </div>
 
-        {/* Carousel Container */}
-        <div
-          ref={scrollRef}
-          className={`scrollbar-hide ease-out-fluid flex snap-x snap-mandatory gap-8 overflow-x-auto px-6 pb-12 transition-all delay-300 duration-1000 ${isVisible ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-24 scale-95 opacity-0'}`}
-          style={{
-            scrollbarWidth: 'none',
-            msOverflowStyle: 'none',
-          }}
-        >
-          {loading
-            ? Array.from({ length: 4 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="min-w-[300px] snap-start md:min-w-[400px]"
-                >
-                  <div className="bg-foreground/10 h-[480px] w-full animate-pulse rounded-[2rem]" />
-                </div>
-              ))
-            : rides.map((ride, idx) => (
-                <div
-                  key={ride.id}
-                  className="snap-start"
-                  style={{ transitionDelay: `${idx * 100}ms` }}
-                >
-                  <RideCard ride={ride} />
-                </div>
-              ))}
+        {/* Carousel Container with side fades */}
+        <div className="relative">
+          {/* Side Fade Overlays */}
+          <div className="from-background pointer-events-none absolute inset-y-0 left-0 z-10 w-7 bg-linear-to-r to-transparent md:w-16" />
+          <div className="from-background pointer-events-none absolute inset-y-0 right-0 z-10 w-7 bg-linear-to-l to-transparent md:w-16" />
+
+          <div
+            ref={scrollRef}
+            className={`scrollbar-hide ease-out-fluid flex snap-x snap-mandatory gap-8 overflow-x-auto px-4 pb-12 transition-all delay-300 duration-1000 ${isVisible ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-24 scale-95 opacity-0'}`}
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none',
+            }}
+          >
+            {loading
+              ? Array.from({ length: 4 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="min-w-[280px] snap-start md:min-w-[360px]"
+                  >
+                    <div className="bg-foreground/10 h-[420px] w-full animate-pulse rounded-[2rem]" />
+                  </div>
+                ))
+              : rides.map((ride, idx) => (
+                  <div
+                    key={ride.id}
+                    className="snap-start"
+                    style={{ transitionDelay: `${idx * 100}ms` }}
+                  >
+                    <RideCard ride={ride} />
+                  </div>
+                ))}
+          </div>
         </div>
       </div>
 

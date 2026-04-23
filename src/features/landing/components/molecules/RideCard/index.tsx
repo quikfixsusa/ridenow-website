@@ -23,13 +23,13 @@ export const RideCard: React.FC<RideCardProps> = ({ ride }) => {
 
     // Currency symbol focus: Always using $ as requested
     const symbol = '$';
-    
+
     return `${symbol}${value.toLocaleString()}`;
   };
 
   return (
     <div className="bg-foreground/5 ring-foreground/5 group relative rounded-[2.5rem] p-1.5 ring-1 transition-transform duration-700 ring-inset hover:scale-[1.01] active:scale-[0.99] md:p-2 dark:bg-white/5">
-      <div className="bg-surface ease-out-fluid relative h-[480px] w-full min-w-[300px] cursor-pointer overflow-hidden rounded-[calc(2.5rem-0.5rem)] shadow-[0_12px_40px_-12px_rgba(0,0,0,0.3)] transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] md:min-w-[400px]">
+      <div className="bg-surface ease-out-fluid relative h-[430px] w-full min-w-[280px] cursor-pointer overflow-hidden rounded-[calc(2.5rem-0.5rem)] shadow-[0_12px_40px_-12px_rgba(0,0,0,0.3)] transition-all duration-700 group-hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.4)] md:min-w-[380px]">
         {/* Background/Primary Image (from card.image) */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
