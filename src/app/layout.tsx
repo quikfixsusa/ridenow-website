@@ -1,10 +1,8 @@
-'use client';
-
 import { Poppins } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
-import { Providers, Header, Footer } from '@/shared';
-import { usePathname } from 'next/navigation';
+import { ClientLayout } from '@/shared/layout/components';
+import { cookies } from 'next/headers';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -43,17 +41,17 @@ const clashDisplay = localFont({
   variable: '--font-clash',
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isFacePage = pathname?.startsWith('/face');
+  const cookieStore = await cookies();
+  const lang = cookieStore.get('ridenow-lang')?.value || 'en';
 
   return (
     <html
-      lang="en"
+      lang={lang}
       className={`${poppins.variable} ${clashDisplay.variable} h-full antialiased`}
       suppressHydrationWarning
     >
@@ -70,12 +68,11 @@ export default function RootLayout({
         className="uppercase-none flex min-h-full flex-col"
         suppressHydrationWarning
       >
-        <Providers>
-          {!isFacePage && <Header />}
-          <main className="grow">{children}</main>
-          {!isFacePage && <Footer />}
-        </Providers>
+        <ClientLayout lang={lang}>
+          {children}
+        </ClientLayout>
       </body>
     </html>
   );
 }
+

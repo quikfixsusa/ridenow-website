@@ -5,11 +5,13 @@ import { Link, Button } from '@heroui/react';
 import { LogoRideNow, IconRideNow } from '@/shared/components/atoms';
 import { useLanguage, useConfigStore } from '@/shared/hooks';
 import { HeaderProps } from './types';
+import { useTheme } from 'next-themes';
 
 export const Header = ({ className }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { t, language, changeLanguage } = useLanguage();
-  const { theme, setTheme } = useConfigStore();
+  const { theme, setTheme: setThemeStore } = useConfigStore();
+  const { setTheme: setThemeNext } = useTheme();
 
   const menuItems = [
     { name: t('header.services'), href: '/services' },
@@ -18,12 +20,15 @@ export const Header = ({ className }: HeaderProps) => {
   ];
 
   const handleThemeToggle = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setThemeNext(newTheme);
+    setThemeStore(newTheme);
   };
 
   const handleLangToggle = () => {
     changeLanguage(language === 'en' ? 'es' : 'en');
   };
+
 
   return (
     <header
