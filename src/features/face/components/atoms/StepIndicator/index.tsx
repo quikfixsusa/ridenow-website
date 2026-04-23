@@ -11,7 +11,7 @@ export const StepIndicator: React.FC<StepIndicatorProps> = ({ currentStep }) => 
   const progressValue = (currentStep / 4) * 100;
 
   return (
-    <div className="w-full bg-white px-6 py-4 shadow-sm">
+    <div className="w-full bg-background px-6 py-4 shadow-sm">
       <div className="mx-auto flex max-w-lg flex-col gap-2">
         <div className="flex justify-between items-end">
           <span className="text-xs font-bold uppercase tracking-widest text-primary">
