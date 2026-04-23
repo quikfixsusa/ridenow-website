@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
+/* eslint-disable @next/next/google-font-display */
 import { Poppins } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
@@ -62,17 +64,17 @@ export default async function RootLayout({
           content="Safe, reliable, and comfortable rides anywhere, anytime. Your premium transportation partner."
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block"
+        />
       </head>
       <body
         className="uppercase-none flex min-h-full flex-col"
         suppressHydrationWarning
       >
-        <ClientLayout lang={lang}>
-          {children}
-        </ClientLayout>
+        <ClientLayout lang={lang}>{children}</ClientLayout>
       </body>
     </html>
   );
 }
-
