@@ -13,6 +13,7 @@ const eslintConfig = defineConfig([
       'tailwindcss/no-custom-classname': 'warn',
       'tailwindcss/classnames-order': 'off',
       'tailwindcss/no-custom-classname': 'off',
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
   // Override default ignores of eslint-config-next.

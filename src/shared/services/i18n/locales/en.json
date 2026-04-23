@@ -174,6 +174,38 @@
       "title": "Login",
       "comingSoon": "Coming Soon",
       "description": "We are working hard to bring you the best user experience."
+    },
+    "resetPassword": {
+      "title": "New Password",
+      "description": "Enter your new password for {{email}}",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter your new password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your new password",
+      "submit": "Reset Password",
+      "backToHome": "Back to Home",
+      "cancelPrompt": "Don't want to reset your password?",
+      "successTitle": "Password Updated!",
+      "successDescription": "Your password has been reset successfully. You can now log in with your new password.",
+      "goToLogin": "Go to Login",
+      "errorTitle": "Action Failed",
+      "errorGeneric": "An error occurred during password reset",
+      "errorExpired": "The action code has expired.",
+      "errorInvalid": "The action code is invalid.",
+      "errorWeak": "The password is too weak."
+    },
+    "verifyEmail": {
+      "verifying": "Verifying your email address...",
+      "successTitle": "Email Verified!",
+      "successDescription": "Your email has been successfully verified. You can now access all features of your account.",
+      "errorTitle": "Verification Failed",
+      "errorGeneric": "An error occurred during verification.",
+      "errorInvalid": "The verification link is invalid or has expired.",
+      "backToHome": "Back to Home",
+      "goToLogin": "Go to Login"
+    },
+    "actions": {
+      "validating": "Validating request..."
     }
   }
 }

@@ -174,6 +174,38 @@
       "title": "Iniciar Sesión",
       "comingSoon": "Disponible Próximamente",
       "description": "Estamos trabajando arduamente para traerte la mejor experiencia de usuario."
+    },
+    "resetPassword": {
+      "title": "Nueva Contraseña",
+      "description": "Ingresa tu nueva contraseña para {{email}}",
+      "newPassword": "Nueva Contraseña",
+      "newPasswordPlaceholder": "Ingresa tu nueva contraseña",
+      "confirmPassword": "Confirmar Contraseña",
+      "confirmPasswordPlaceholder": "Confirma tu nueva contraseña",
+      "submit": "Restablecer Contraseña",
+      "backToHome": "Volver al Inicio",
+      "cancelPrompt": "¿No quieres restablecer tu contraseña?",
+      "successTitle": "¡Contraseña Actualizada!",
+      "successDescription": "Tu contraseña ha sido restablecida con éxito. Ahora puedes iniciar sesión con tu nueva contraseña.",
+      "goToLogin": "Ir al Inicio de Sesión",
+      "errorTitle": "Acción Fallida",
+      "errorGeneric": "Ocurrió un error durante el restablecimiento de contraseña",
+      "errorExpired": "El código de acción ha expirado.",
+      "errorInvalid": "El código de acción no es válido.",
+      "errorWeak": "La contraseña es muy débil."
+    },
+    "verifyEmail": {
+      "verifying": "Verificando tu dirección de correo electrónico...",
+      "successTitle": "¡Correo Verificado!",
+      "successDescription": "Tu correo electrónico ha sido verificado con éxito. Ahora puedes acceder a todas las funciones de tu cuenta.",
+      "errorTitle": "Verificación Fallida",
+      "errorGeneric": "Ocurrió un error durante la verificación.",
+      "errorInvalid": "El enlace de verificación no es válido o ha expirado.",
+      "backToHome": "Volver al Inicio",
+      "goToLogin": "Ir al Inicio de Sesión"
+    },
+    "actions": {
+      "validating": "Validando solicitud..."
     }
   }
 }

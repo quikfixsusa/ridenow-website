@@ -60,6 +60,7 @@ export default function RootLayout({
           content="Safe, reliable, and comfortable rides anywhere, anytime. Your premium transportation partner."
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=block" />
       </head>
       <body
         className="uppercase-none flex min-h-full flex-col"
