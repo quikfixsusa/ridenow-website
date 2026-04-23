@@ -57,7 +57,8 @@ export const ContactForm = () => {
         </TextField>
         <Button
           type="submit"
-          className="bg-foreground text-background mt-4 h-12 rounded-2xl text-base font-semibold transition-transform active:scale-[0.98]"
+          fullWidth
+          className="bg-foreground text-background mt-4 h-12 rounded-2xl text-base font-medium transition-transform active:scale-[0.98]"
         >
           {t('contact.form.send')}
           <svg
