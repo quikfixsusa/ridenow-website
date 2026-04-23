@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { httpsCallable } from 'firebase/functions';
 import { Button } from '@heroui/react';
@@ -19,7 +19,12 @@ export const VerifyEmail: React.FC<VerifyEmailProps> = ({ actionCode }) => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
+  const hasCalled = useRef(false);
+  
   useEffect(() => {
+    if (!actionCode || hasCalled.current) return;
+    hasCalled.current = true;
+    
     const verifyEmail = async () => {
       try {
         // Call the Cloud Function
@@ -52,9 +57,7 @@ export const VerifyEmail: React.FC<VerifyEmailProps> = ({ actionCode }) => {
       }
     };
 
-    if (actionCode) {
-      verifyEmail();
-    }
+    verifyEmail();
   }, [actionCode, t]);
 
   if (loading) {
