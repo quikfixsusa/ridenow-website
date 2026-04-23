@@ -2,7 +2,7 @@
 
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useState, useEffect, Suspense, useCallback } from 'react';
-import { Button, Card, Spinner, Separator, Chip } from '@heroui/react';
+import { Button, Card, Spinner } from '@heroui/react';
 
 import { Camera, StepIndicator } from '../../components';
 import {
@@ -177,7 +177,8 @@ const VerificationContent: React.FC = () => {
       } else {
         setStep(VerificationStep.FAILURE);
       }
-    } catch (e) {
+    } catch (error) {
+      console.error(error);
       setVerificationResult({
         isVerified: false,
         confidence: 0,
@@ -242,7 +243,7 @@ const VerificationContent: React.FC = () => {
 
   if (step === VerificationStep.INTRO) {
     return (
-      <div className="relative flex min-h-screen flex-col overflow-hidden bg-background">
+      <div className="bg-background relative flex min-h-screen flex-col overflow-hidden">
         {/* Background Accent */}
         <div className="bg-primary/10 absolute -top-24 -right-24 h-64 w-64 rounded-full blur-3xl"></div>
         <div className="bg-primary/5 absolute -bottom-24 -left-24 h-64 w-64 rounded-full blur-3xl"></div>
@@ -292,7 +293,7 @@ const VerificationContent: React.FC = () => {
   if (step === VerificationStep.DOCUMENT_SELECTION) {
     return (
       <div className="bg-default-50 flex min-h-screen flex-col">
-        <div className="border-default-100 sticky top-0 z-20 border-b bg-background/80 p-6 backdrop-blur-xl">
+        <div className="border-default-100 bg-background/80 sticky top-0 z-20 border-b p-6 backdrop-blur-xl">
           <Button
             isIconOnly
             variant="ghost"
@@ -309,7 +310,7 @@ const VerificationContent: React.FC = () => {
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center space-y-6 p-6">
           <Button
             onPress={() => selectDocument(DocumentType.NATIONAL_ID)}
-            className="h-auto w-full items-center justify-start rounded-2xl border-none bg-background p-2 text-left shadow-md transition-all hover:shadow-lg"
+            className="bg-background h-auto w-full items-center justify-start rounded-2xl border-none p-2 text-left shadow-md transition-all hover:shadow-lg"
           >
             <div className="flex w-full flex-row items-center gap-6 p-6">
               <div className="bg-primary/10 text-primary flex h-16 w-16 items-center justify-center rounded-2xl">
@@ -328,7 +329,7 @@ const VerificationContent: React.FC = () => {
 
           <Button
             onPress={() => selectDocument(DocumentType.LICENSE)}
-            className="h-auto w-full items-center justify-start rounded-2xl border-none bg-background p-2 text-left shadow-md transition-all hover:shadow-lg"
+            className="bg-background h-auto w-full items-center justify-start rounded-2xl border-none p-2 text-left shadow-md transition-all hover:shadow-lg"
           >
             <div className="flex w-full flex-row items-center gap-6 p-6">
               <div className="bg-secondary/10 text-secondary flex h-16 w-16 items-center justify-center rounded-2xl">
@@ -397,7 +398,7 @@ const VerificationContent: React.FC = () => {
 
         {/* Processing State */}
         {isProcessing && (
-          <div className="animate-in fade-in flex flex-1 flex-col items-center justify-center gap-6 bg-background p-8 duration-500">
+          <div className="animate-in fade-in bg-background flex flex-1 flex-col items-center justify-center gap-6 p-8 duration-500">
             <div className="relative">
               <Spinner size="lg" color="accent" />
               <div className="absolute inset-0 flex items-center justify-center">
@@ -421,14 +422,14 @@ const VerificationContent: React.FC = () => {
 
         {/* Confirmation Step */}
         {step === VerificationStep.DOCUMENT_CONFIRM && extractedData && (
-          <div className="flex flex-1 flex-col overflow-y-auto bg-background">
+          <div className="bg-background flex flex-1 flex-col overflow-y-auto">
             <div className="mx-auto w-full max-w-md p-8">
               <h2 className="text-default-900 mb-8 text-3xl font-bold tracking-tight">
                 {t.confirm_details}
               </h2>
 
               <div className="group relative mb-10">
-                <div className="from-primary/20 to-secondary/20 absolute -inset-1 rounded-2xl bg-gradient-to-r opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
+                <div className="from-primary/20 to-secondary/20 absolute -inset-1 rounded-2xl bg-linear-to-r opacity-75 blur transition duration-1000 group-hover:opacity-100 group-hover:duration-200"></div>
                 <img
                   src={docImage!}
                   alt="Document Capture"
@@ -476,7 +477,7 @@ const VerificationContent: React.FC = () => {
               </div>
             </div>
 
-            <div className="border-default-100 sticky bottom-0 mt-auto border-t bg-background/80 p-8 backdrop-blur-md">
+            <div className="border-default-100 bg-background/80 sticky bottom-0 mt-auto border-t p-8 backdrop-blur-md">
               <div className="mx-auto flex max-w-md gap-4">
                 <Button
                   variant="ghost"
@@ -488,7 +489,7 @@ const VerificationContent: React.FC = () => {
                 <Button
                   onPress={confirmDocumentData}
                   variant="primary"
-                  className="shadow-primary/20 h-14 flex-[2] font-bold shadow-lg"
+                  className="shadow-primary/20 h-14 flex-2 font-bold shadow-lg"
                 >
                   {t.confirm_next}
                 </Button>
@@ -499,7 +500,7 @@ const VerificationContent: React.FC = () => {
 
         {/* Face Instruction Step */}
         {step === VerificationStep.FACE_INSTRUCTION && currentGesture && (
-          <div className="flex flex-1 flex-col items-center justify-center gap-10 bg-background p-8 text-center">
+          <div className="bg-background flex flex-1 flex-col items-center justify-center gap-10 p-8 text-center">
             <div className="relative">
               <div className="bg-primary/5 absolute -inset-4 animate-ping rounded-full"></div>
               <div className="border-primary/20 bg-primary/5 relative flex h-36 w-36 items-center justify-center rounded-full border-4 shadow-inner">
@@ -552,7 +553,7 @@ const VerificationContent: React.FC = () => {
 
         {/* Success View */}
         {step === VerificationStep.SUCCESS && (
-          <div className="animate-in zoom-in-95 fade-in flex flex-1 flex-col items-center justify-center gap-8 bg-background p-8 text-center duration-500">
+          <div className="animate-in zoom-in-95 fade-in bg-background flex flex-1 flex-col items-center justify-center gap-8 p-8 text-center duration-500">
             <div className="bg-success/10 text-success flex h-32 w-32 items-center justify-center rounded-full shadow-inner">
               <span className="material-symbols-rounded text-6xl">
                 check_circle
@@ -591,7 +592,7 @@ const VerificationContent: React.FC = () => {
 
         {/* Failure View */}
         {step === VerificationStep.FAILURE && (
-          <div className="animate-in zoom-in-95 fade-in flex flex-1 flex-col items-center justify-center gap-8 bg-background p-8 text-center duration-500">
+          <div className="animate-in zoom-in-95 fade-in bg-background flex flex-1 flex-col items-center justify-center gap-8 p-8 text-center duration-500">
             <div className="bg-danger/10 text-danger flex h-32 w-32 items-center justify-center rounded-full shadow-inner">
               <span className="material-symbols-rounded text-6xl">cancel</span>
             </div>
@@ -637,7 +638,7 @@ export const FacePage: React.FC = () => {
   return (
     <Suspense
       fallback={
-        <div className="flex h-screen items-center justify-center bg-background">
+        <div className="bg-background flex h-screen items-center justify-center">
           <div className="flex flex-col items-center gap-4">
             <Spinner size="lg" color="accent" />
             <p className="text-default-500 font-medium tracking-tight">
