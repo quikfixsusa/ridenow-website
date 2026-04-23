@@ -104,7 +104,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({
             </span>
           </div>
           <div>
-            <h2 className="font-display mb-2 text-2xl font-bold text-white">
+            <h2 className="font-display mb-2 text-2xl font-bold text-foreground">
               {t('auth.resetPassword.successTitle')}
             </h2>
             <p className="text-gray-400">
@@ -129,7 +129,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({
         <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-yellow-400 text-black shadow-lg">
           <IconRideNow size={32} />
         </div>
-        <h1 className="font-display text-3xl font-bold text-white">
+        <h1 className="font-display text-3xl font-bold text-foreground">
           {t('auth.resetPassword.title')}
         </h1>
         <p className="text-sm text-gray-400">
@@ -152,7 +152,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({
               type={isVisible ? 'text' : 'password'}
               value={formData.newPassword}
               onChange={handleChange}
-              className="bg-background/50 border-divider focus:ring-primary h-12 w-full rounded-xl px-4 pr-12 text-white outline-none focus:ring-2"
+              className="bg-default-100/50 border-divider focus:ring-primary h-12 w-full rounded-xl px-4 pr-12 text-foreground outline-none focus:ring-2"
             />
             <button
               className="absolute right-4 focus:outline-none"
@@ -182,7 +182,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({
             type={isVisible ? 'text' : 'password'}
             value={formData.confirmNewPassword}
             onChange={handleChange}
-            className="bg-background/50 border-divider focus:ring-primary h-12 rounded-xl px-4 text-white outline-none focus:ring-2"
+            className="bg-default-100/50 border-divider focus:ring-primary h-12 rounded-xl px-4 text-foreground outline-none focus:ring-2"
           />
           {errors.confirmNewPassword && (
             <span className="text-danger text-xs">
@@ -218,7 +218,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({
           <button
             type="button"
             onClick={() => router.push('/')}
-            className="font-bold text-white hover:underline"
+            className="font-bold text-foreground hover:underline"
           >
             {t('auth.resetPassword.backToHome')}
           </button>

@@ -82,7 +82,7 @@ export const VerifyEmail: React.FC<VerifyEmailProps> = ({ actionCode }) => {
               </span>
             </div>
             <div>
-              <h2 className="font-display mb-2 text-2xl font-bold text-white">
+              <h2 className="font-display mb-2 text-2xl font-bold text-foreground">
                 {t('auth.verifyEmail.successTitle')}
               </h2>
               <p className="text-gray-400">
@@ -105,7 +105,7 @@ export const VerifyEmail: React.FC<VerifyEmailProps> = ({ actionCode }) => {
               </span>
             </div>
             <div>
-              <h2 className="font-display mb-2 text-2xl font-bold text-white">
+              <h2 className="font-display mb-2 text-2xl font-bold text-foreground">
                 {t('auth.verifyEmail.errorTitle')}
               </h2>
               <p className="text-gray-400">
@@ -124,7 +124,7 @@ export const VerifyEmail: React.FC<VerifyEmailProps> = ({ actionCode }) => {
 
         <div className="mt-4 flex items-center justify-center gap-2 opacity-50">
           <IconRideNow size={24} />
-          <span className="text-xs font-bold uppercase tracking-widest text-white">RideNow</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-foreground">RideNow</span>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@ import { Poppins } from 'next/font/google';
 import localFont from 'next/font/local';
 import './globals.css';
 import { Providers, Header, Footer } from '@/shared';
+import { usePathname } from 'next/navigation';
 
 const poppins = Poppins({
   variable: '--font-poppins',
@@ -47,6 +48,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isFacePage = pathname?.startsWith('/face');
+
   return (
     <html
       lang="en"
@@ -60,16 +64,16 @@ export default function RootLayout({
           content="Safe, reliable, and comfortable rides anywhere, anytime. Your premium transportation partner."
         />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=block" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block" />
       </head>
       <body
         className="uppercase-none flex min-h-full flex-col"
         suppressHydrationWarning
       >
         <Providers>
-          <Header />
+          {!isFacePage && <Header />}
           <main className="grow">{children}</main>
-          <Footer />
+          {!isFacePage && <Footer />}
         </Providers>
       </body>
     </html>

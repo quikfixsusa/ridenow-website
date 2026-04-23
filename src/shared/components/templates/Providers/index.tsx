@@ -44,8 +44,6 @@ export const Providers: React.FC<ProvidersProps> = ({ children }) => {
     }
   }, [theme]);
 
-  // Ensure initial suppression of hydration mismatch by only rendering after mount if needed,
-  // but for pure providers, just returning children is fine since CSS takes care of initial mismatch mostly.
   return (
     <>
       <Suspense fallback={null}>
