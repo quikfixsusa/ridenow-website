@@ -75,6 +75,7 @@ export const ContactInfo = () => {
         <h2 className="text-4xl font-bold tracking-tight md:text-5xl">
           {t('contact.hero.title')}
         </h2>
+
         <p className="text-foreground/60 mt-6 text-lg leading-relaxed">
           {t('contact.hero.subtitle')}
         </p>
