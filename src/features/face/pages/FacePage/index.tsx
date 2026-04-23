@@ -137,9 +137,7 @@ const VerificationContent: React.FC = () => {
     } catch (error) {
       console.error(error);
       setIsProcessing(false);
-      setCaptureError(
-        lang === 'es' ? 'Error procesando imagen.' : 'Error processing image.'
-      );
+      setCaptureError(t.error_processing);
       setStep(VerificationStep.DOCUMENT_CAPTURE);
     } finally {
       setIsProcessing(false);
@@ -182,7 +180,7 @@ const VerificationContent: React.FC = () => {
       setVerificationResult({
         isVerified: false,
         confidence: 0,
-        reason: lang === 'es' ? 'Error de red' : 'Network error',
+        reason: t.network_error,
       });
       setStep(VerificationStep.FAILURE);
     } finally {
@@ -280,7 +278,7 @@ const VerificationContent: React.FC = () => {
             onPress={handleStart}
             variant="primary"
             size="lg"
-            className="shadow-primary/20 h-16 w-full text-lg font-bold shadow-xl"
+            className="shadow-primary/20 h-16 w-full text-lg font-medium shadow-xl"
           >
             {t.start}
             <span className="material-symbols-rounded">arrow_forward</span>
@@ -293,16 +291,16 @@ const VerificationContent: React.FC = () => {
   if (step === VerificationStep.DOCUMENT_SELECTION) {
     return (
       <div className="bg-default-50 flex min-h-screen flex-col">
-        <div className="border-default-100 bg-background/80 sticky top-0 z-20 border-b p-6 backdrop-blur-xl">
+        <div className="border-default-100 bg-background/80 sticky top-0 z-20 flex flex-row items-center gap-4 border-b px-6 py-4 backdrop-blur-xl">
           <Button
             isIconOnly
-            variant="ghost"
             onPress={() => setStep(VerificationStep.INTRO)}
-            className="mb-4"
+            size="sm"
+            className="rounded-full"
           >
-            <span className="material-symbols-rounded">chevron_left</span>
+            <span className="material-symbols-rounded">arrow_back</span>
           </Button>
-          <h2 className="text-default-900 text-3xl font-bold tracking-tight">
+          <h2 className="text-default-900 text-xl font-bold tracking-tight">
             {t.select_doc_type}
           </h2>
         </div>
@@ -310,40 +308,36 @@ const VerificationContent: React.FC = () => {
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center space-y-6 p-6">
           <Button
             onPress={() => selectDocument(DocumentType.NATIONAL_ID)}
-            className="bg-background h-auto w-full items-center justify-start rounded-2xl border-none p-2 text-left shadow-md transition-all hover:shadow-lg"
+            className="bg-background h-auto w-full items-center justify-start rounded-2xl border-none p-1 text-left shadow-md transition-all hover:shadow-lg"
           >
-            <div className="flex w-full flex-row items-center gap-6 p-6">
-              <div className="bg-primary/10 text-primary flex h-16 w-16 items-center justify-center rounded-2xl">
+            <div className="flex w-full flex-row items-center gap-4 p-4">
+              <div className="bg-primary/10 text-primary flex h-14 w-14 shrink-0 items-center justify-center rounded-lg">
                 <span className="material-symbols-rounded text-3xl">badge</span>
               </div>
-              <div className="flex-1 text-left">
-                <p className="text-default-800 text-xl font-bold">
+              <div className="flex flex-1 flex-col justify-center">
+                <p className="text-default-800 text-lg font-bold">
                   {getDocLabel(DocumentType.NATIONAL_ID, country, lang)}
                 </p>
-                <p className="text-default-400 text-sm">
-                  Official government ID
-                </p>
+                <p className="text-default-400 text-xs">{t.doc_id_desc}</p>
               </div>
             </div>
           </Button>
 
           <Button
             onPress={() => selectDocument(DocumentType.LICENSE)}
-            className="bg-background h-auto w-full items-center justify-start rounded-2xl border-none p-2 text-left shadow-md transition-all hover:shadow-lg"
+            className="bg-background h-auto w-full items-center justify-start rounded-2xl border-none p-1 text-left shadow-md transition-all hover:shadow-lg"
           >
-            <div className="flex w-full flex-row items-center gap-6 p-6">
-              <div className="bg-secondary/10 text-secondary flex h-16 w-16 items-center justify-center rounded-2xl">
+            <div className="flex w-full flex-row items-center gap-4 p-4">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-orange-500/10 text-orange-600">
                 <span className="material-symbols-rounded text-3xl">
                   credit_card
                 </span>
               </div>
-              <div className="flex-1 text-left">
-                <p className="text-default-800 text-xl font-bold">
+              <div className="flex flex-1 flex-col justify-center">
+                <p className="text-default-800 text-lg font-medium">
                   {getDocLabel(DocumentType.LICENSE, country, lang)}
                 </p>
-                <p className="text-default-400 text-sm">
-                  Driver&apos;s permit card
-                </p>
+                <p className="text-default-400 text-xs">{t.doc_license_desc}</p>
               </div>
             </div>
           </Button>
@@ -385,7 +379,7 @@ const VerificationContent: React.FC = () => {
                     <Button
                       onPress={handleRetryCapture}
                       variant="primary"
-                      className="h-12 w-full font-bold"
+                      className="h-12 w-full font-medium"
                     >
                       {t.retry}
                     </Button>
@@ -482,14 +476,14 @@ const VerificationContent: React.FC = () => {
                 <Button
                   variant="ghost"
                   onPress={() => setStep(VerificationStep.DOCUMENT_CAPTURE)}
-                  className="h-14 flex-1 font-bold"
+                  className="h-14 flex-1 font-medium"
                 >
                   {t.retake}
                 </Button>
                 <Button
                   onPress={confirmDocumentData}
                   variant="primary"
-                  className="shadow-primary/20 h-14 flex-2 font-bold shadow-lg"
+                  className="shadow-primary/20 h-14 flex-2 font-medium shadow-lg"
                 >
                   {t.confirm_next}
                 </Button>
@@ -522,7 +516,7 @@ const VerificationContent: React.FC = () => {
             <Card className="bg-primary w-full max-w-xs border-none p-2 text-white shadow-xl">
               <Card.Content className="gap-2 p-8 text-center">
                 <span className="text-[10px] font-black tracking-[0.3em] uppercase opacity-60">
-                  Gesture Required
+                  {t.gesture_required}
                 </span>
                 <p className="text-2xl leading-tight font-black tracking-tight italic">
                   &quot;{currentGesture.label[lang]}&quot;
@@ -584,7 +578,7 @@ const VerificationContent: React.FC = () => {
             <div className="flex flex-col items-center gap-3 pt-6">
               <Spinner size="sm" color="accent" />
               <p className="text-default-400 text-sm font-bold tracking-widest uppercase">
-                {lang === 'es' ? 'Redirigiendo' : 'Redirecting'}
+                {t.redirecting}
               </p>
             </div>
           </div>
@@ -642,7 +636,10 @@ export const FacePage: React.FC = () => {
           <div className="flex flex-col items-center gap-4">
             <Spinner size="lg" color="accent" />
             <p className="text-default-500 font-medium tracking-tight">
-              Loading Verification System...
+              {typeof window !== 'undefined' &&
+              window.location.search.includes('lang=en')
+                ? 'Loading Verification System...'
+                : 'Cargando Sistema de Verificación...'}
             </p>
           </div>
         </div>
