@@ -206,6 +206,22 @@
     },
     "actions": {
       "validating": "Validating request..."
+    },
+    "deleteUser": {
+      "title": "Delete Account",
+      "description": "We're sorry to see you go. To permanently delete your account, please confirm your credentials.",
+      "email": "Email Address",
+      "emailPlaceholder": "you@email.com",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "submit": "Delete my account permanently",
+      "warning": "This action is irreversible. All your data will be permanently deleted.",
+      "successTitle": "Account Deleted",
+      "successDescription": "Your account has been successfully deleted. We hope to see you again soon.",
+      "errorTitle": "Deletion Failed",
+      "errorGeneric": "There was a problem processing your request. Please try again.",
+      "errorInvalid": "Invalid credentials.",
+      "backToHome": "Back to Home"
     }
   }
 }

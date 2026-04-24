@@ -206,6 +206,22 @@
     },
     "actions": {
       "validating": "Validando solicitud..."
+    },
+    "deleteUser": {
+      "title": "Eliminar Cuenta",
+      "description": "Lamentamos que te vayas. Para eliminar tu cuenta de forma permanente, por favor confirma tus credenciales.",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "tu@correo.com",
+      "password": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "submit": "Eliminar mi cuenta permanentemente",
+      "warning": "Esta acción es irreversible. Todos tus datos serán eliminados.",
+      "successTitle": "Cuenta Eliminada",
+      "successDescription": "Tu cuenta ha sido eliminada correctamente. Esperamos volver a verte pronto.",
+      "errorTitle": "Error al Eliminar",
+      "errorGeneric": "Hubo un problema al procesar tu solicitud. Por favor, inténtalo de nuevo.",
+      "errorInvalid": "Credenciales incorrectas.",
+      "backToHome": "Volver al Inicio"
     }
   }
 }
